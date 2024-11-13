@@ -45,5 +45,17 @@ imagePromptResponse = client.chat.completions.create(
 finalHtml = imagePromptResponse.choices[0].message.content.strip()
 
 
+
 with open('artykul.html', 'w', encoding='utf-8') as file:
     file.write(finalHtml)
+    
+with open('szablon.html', 'r', encoding='utf-8') as template:
+    templateContent = template.read()
+    bodyStart = templateContent.find("<body>") + len("<body>")
+    bodyEnd = templateContent.find("</body>")
+    newContent = templateContent[:bodyStart] + finalHtml + templateContent[bodyEnd:]
+    
+    with open('podglad.html', 'w', encoding='utf-8') as output:
+        output.write(newContent)
+    
+    
