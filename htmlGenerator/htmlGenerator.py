@@ -27,7 +27,9 @@ try:
     "Return the answer without code markdowns. "
     f"Here’s the text: {text}"
     )}
-        ]
+        ],
+        temperature= 0.2,
+        stop=["</body>"]
     )
     htmlCode = htmlResponse.choices[0].message.content
 
