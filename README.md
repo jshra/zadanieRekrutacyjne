@@ -23,5 +23,6 @@ Struktura plików:
  Uruchomienie:
 1. Instalacja potrzebnych bibliotek
 2. Przygotowanie plików 'text.txt' z treścią artykułu i 'szablon.html' z szablonem HTML do wyświetlenia artykułu
-3. Uruchomienie aplikacji (np. przy pomocy komendy >python htmlGenerator.py lub wewnątrz IDE)
+3. Dodanie klucza API wewnątrz skryptu 'htmlGenerator.py' (jeżeli konieczne) 
+4. Uruchomienie aplikacji (np. przy pomocy komendy >python htmlGenerator.py lub wewnątrz IDE)
  
